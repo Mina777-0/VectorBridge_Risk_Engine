@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalto Dashboard</title>
+    <script>
+        const wsocket= new WebSocket("ws://127.0.0.1:8080/ws/dashboard/");
+
+        wsocket.onmessage= function(event) {
+            const data= JSON.parse(event.data);
+            console.log("Data= ", data);
+            console.log("symbols= ", data.symbol_data);
+            console.log("Total PnL= ", data.total_pnl);
+
+            const tbl_body= document.querySelector('.tbl-body');
+            tbl_body.innerHTML= "";
+            
+            data.symbol_data.forEach(element => {
+                const row= document.createElement('tr');
+
+                row.innerHTML= `
+                    <td>${element[0]}</td>
+                    <td>${element[1].toFixed(2)}</td>
+                    <td>${element[2]}</td>
+                    <td>${data.total_pnl.toFixed(2)}</td>
+                    <td>${data.total_exposure.toLocaleString()}</td>
+                `;
+
+                tbl_body.appendChild(row);
+            });
+            
+        };
+
+
+        wsocket.onclose= function() {
+            console.log("Connection is closed!");
+        };
+
+    </script>
+
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol ID</th>
+                    <th>Last Price</th>
+                    <th>Position</th>
+                    <th>Total PnL (Global)</th>
+                    <th>Total Exposure (Global)</th>
+
+                </tr>
+            </thead>
+            <tbody class="tbl-body"></tbody>
+            
+        </table>
+    </div>
+    
+</body>
+</html>
