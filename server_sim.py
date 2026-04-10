@@ -160,8 +160,8 @@ class ConnectionHandler:
                         self.loop.remove_reader(fd)
                     continue
                 
-        except Exception as e:
-            print(f"ERROR: {e}")
+        except ConnectionResetError:
+            print(f"Connection reset by client peer")
 
 
     async def clear_connection(self):
