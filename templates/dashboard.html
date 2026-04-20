@@ -9,6 +9,14 @@
 
         wsocket.onmessage= function(event) {
             const data= JSON.parse(event.data);
+            /*
+            if (Array.isArray(data)) {
+                console.log("It's a list! Safe to use .forEach()");
+            } else {
+                console.log("Not list");
+            }
+            */
+
             console.log("Data= ", data);
             console.log("symbols= ", data.symbol_data);
             console.log("Total PnL= ", data.total_pnl);
@@ -18,11 +26,12 @@
             
             data.symbol_data.forEach(element => {
                 const row= document.createElement('tr');
+                // console.log("element-2", element.last_price);
 
                 row.innerHTML= `
-                    <td>${element[0]}</td>
-                    <td>${element[1].toFixed(2)}</td>
-                    <td>${element[2]}</td>
+                    <td>${element.symbol_id}</td>
+                    <td>${element.last_price.toFixed(2)}</td>
+                    <td>${element.position}</td>
                     <td>${data.total_pnl.toFixed(2)}</td>
                     <td>${data.total_exposure.toLocaleString()}</td>
                 `;

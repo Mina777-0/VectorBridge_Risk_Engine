@@ -9,6 +9,7 @@ dependencies = [
     "cryptography>=46.0.6",
     "dotenv>=0.9.9",
     "jinja2>=3.1.6",
+    "maturin>=1.13.1",
     "numpy>=2.4.4",
     "pandas>=3.0.2",
 ]

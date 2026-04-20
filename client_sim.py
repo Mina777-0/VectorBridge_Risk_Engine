@@ -107,7 +107,7 @@ async def start_client():
 
             await asyncio.sleep(0.05)
             i +=1
-            if i > 150:
+            if i > 10:
                 break
         except Exception as e:
             print(f"\n[CLIENT]: Error sending packet: {e}")

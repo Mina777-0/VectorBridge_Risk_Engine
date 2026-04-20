@@ -39,7 +39,8 @@ async def ws_handler(request:web.Request) -> web.WebSocketResponse:
             metrics= risk_engine.calculate_metrics()
             #print("METRICS ARE CALCULATED")
 
-            await ws.send_json(metrics)
+            #await ws.send_json(metrics.to_json())
+            await ws.send_str(metrics.to_json())
 
             await asyncio.sleep(1)
 
@@ -48,9 +49,10 @@ async def ws_handler(request:web.Request) -> web.WebSocketResponse:
 
     finally:
         return ws
+    
 
 
-async def start_aiohttp(risk_engine: RiskEngine):
+async def start_aiohttp(risk_engine):
     try:
         application= web.Application()
         # Store the risk engine in the app, so the handler can see it

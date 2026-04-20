@@ -1,10 +1,12 @@
 import asyncio, socket, ssl, sys, os 
 from typing import Optional, List
 from dotenv import load_dotenv
+import time 
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'utils')))
 from utils.protocols_schemas import CircularBuffer, RiskEngine
 from utils.log_config import get_logger
+from utils.queue_config import QueueManager
 
 
 logger= get_logger()
@@ -29,10 +31,16 @@ class ConnectionHandler:
         self.loop= asyncio.get_running_loop()
         self.tasks: List[asyncio.Task]= []
         self.risk_engine: Optional[RiskEngine]= None
+        self.qm: QueueManager= None
+        self.max_tasks= 3
+
 
     # Add risk engine instance 
     def add_risk_engine(self, risk_engine: RiskEngine):
         self.risk_engine= risk_engine
+
+    def add_queue_manager(self, qm: QueueManager):
+        self.qm= qm 
         
 
     async def start_server(self):
@@ -58,7 +66,6 @@ class ConnectionHandler:
         print(f"\n[SERVER]: Server is listing on {self.ip_address[0]}:{self.ip_address[1]}. Waiting for connections ..")
         logger.info("[SERVER]: Server is running!")
 
-        
 
         try:
             while True:
@@ -89,6 +96,7 @@ class ConnectionHandler:
                     try:
                         logger.info("[SERVER]: Waiter is created in waiting for connection to accept")
                         await waiter
+                        
                     finally:
                         logger.info("[SERVER]: fd is removed. Connection is accepted")
                         self.loop.remove_reader(fd)
@@ -103,7 +111,8 @@ class ConnectionHandler:
         except Exception as e:
             logger.error(f"Unexpected error occured: {e}")
             raise
-
+        
+    
 
     async def handler(self):
         
@@ -115,6 +124,7 @@ class ConnectionHandler:
 
             while True:
                 try:
+                    #t0= time.perf_counter_ns()
                     nbytes= self.ssock.recv_into(self.cb.write_to())
                     print(f"nbyes= {nbytes}")
                     if nbytes == 0:
@@ -126,7 +136,13 @@ class ConnectionHandler:
                     while self.cb.count >= self.cb.packet_size:
                         
                         fields= self.cb.peek()
+                        t2= time.perf_counter_ns()
                         print(fields)
+                        try:
+                            await self.qm.add_items(fields)
+                        except Exception as e:
+                            print(f"\n[SERVER]: QM: {e}")
+                        '''
                         if fields[0] == 0:
                             self.risk_engine.update_market_price(fields[1], fields[2])
                             logger.info("[RISK MANAGER]: Book prices are updated")
@@ -138,8 +154,12 @@ class ConnectionHandler:
                             logger.info("[RISK MANAGER]: trade is processed")
                             print(self.risk_engine.book)
                             #print(self.risk_engine.id_to_idx)
-
+                        '''
+                        t3= time.perf_counter_ns()
+                        print(f"\n[CALCULATIONS TIME]: ({(t3 - t2) / 1000 :.2f}")
                         self.cb.advance()
+                    #t1= time.perf_counter_ns()
+                    #print(f"\n[SOCKET TIME]: ({(t1 - t0) / 1000 :.2f}")
 
                 # Try to read the binary data except reader or writer want to read but no data. Wait and don't close the socket
                 except (ssl.SSLWantReadError, ssl.SSLWantWriteError):
@@ -181,6 +201,7 @@ class ConnectionHandler:
         try:
             # Close the socket
             if self.ssock:
+                logger.info(f"[SERVER]: ssock {self.ssock.getsockname()} is closing")
                 self.ssock.close()
 
         except Exception as e:
