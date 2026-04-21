@@ -39,7 +39,7 @@ git clone <repository-url>
 cd <repository-folder>
 
 2. Install Dependencies:
-pip install -r requirements.txt
+uv sync
 
 3. Run the System: To simplify local testing, the system is designed to run in three parts:
     * Server: python main.py (Starts Ingestion + Queue Manager + Dashboard along with both the Socket Server and the Dashboard)
