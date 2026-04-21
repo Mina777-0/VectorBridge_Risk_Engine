@@ -3,9 +3,8 @@ import sys, os, asyncio
 from jinja2 import Environment, FileSystemLoader
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'utils')))
-from utils.protocols_schemas import RiskEngine
 from utils.log_config import get_logger
-
+from risk_manager import RiskEngine
 
 logger= get_logger()
 #logger.info("main TEST")
@@ -52,7 +51,7 @@ async def ws_handler(request:web.Request) -> web.WebSocketResponse:
     
 
 
-async def start_aiohttp(risk_engine):
+async def start_aiohttp(risk_engine:RiskEngine):
     try:
         application= web.Application()
         # Store the risk engine in the app, so the handler can see it

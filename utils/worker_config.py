@@ -1,14 +1,13 @@
 import asyncio, sys, os 
-from protocols_schemas import RiskEngine
+#from protocols_schemas import RiskEngine
 from typing import Optional
 from queue_config import QueueManager
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'rust_config', 'risk_manager/target/debug')))
+#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'risk_manager/target/debug')))
 
 #print(sys.path)
-import risk_manager
-
+from risk_manager import RiskEngine
 from utils.log_config import get_logger
 
 logger= get_logger()
@@ -19,7 +18,7 @@ logger= get_logger()
 
 class WorkerManager:
     def __init__(self, **kw):
-        self.risk_engine:risk_manager.RiskEngine = None
+        self.risk_engine:RiskEngine = None
         self.workers= []
         self.qm: Optional[QueueManager]= None    
         self.max_workers= kw.get('max_worker') if kw.get('max_worker') else 2
@@ -93,7 +92,7 @@ async def demo():
     symbol_id_1= 1001
     symbol_id_2= 1002
 
-    risk_engine= risk_manager.RiskEngine(10)
+    risk_engine= RiskEngine(10)
     risk_engine.get_idx(symbol_id_1)
     risk_engine.get_idx(symbol_id_2)
 

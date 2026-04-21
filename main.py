@@ -1,7 +1,7 @@
 import sys, os, asyncio 
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'utils')))
-from utils.protocols_schemas import RiskEngine
+#from utils.protocols_schemas import RiskEngine
 from utils.log_config import get_logger
 from server_sim import ConnectionHandler
 from ws_handlers import start_aiohttp
@@ -10,15 +10,12 @@ from utils.worker_config import WorkerManager
 
 logger= get_logger()
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'rust_config/risk_manager', 'target/debug')))
-import risk_manager
-
+from risk_manager import RiskEngine
 
 
 async def main():
     conn_hand= ConnectionHandler()
-    #risk_engine= RiskEngine()
-    risk_engine= risk_manager.RiskEngine(5)
+    risk_engine= RiskEngine(5)
     qm= QueueManager()
     qm.initiate_queues()
     conn_hand.add_risk_engine(risk_engine)

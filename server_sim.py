@@ -1,13 +1,13 @@
 import asyncio, socket, ssl, sys, os 
-from typing import Optional, List
+from typing import Optional, Set
 from dotenv import load_dotenv
 import time 
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'utils')))
-from utils.protocols_schemas import CircularBuffer, RiskEngine
+from utils.protocols_schemas import CircularBuffer
 from utils.log_config import get_logger
 from utils.queue_config import QueueManager
-
+from risk_manager import RiskEngine
 
 logger= get_logger()
 #logger.info("Engine TEST")
@@ -29,7 +29,7 @@ class ConnectionHandler:
         self.cb: Optional[CircularBuffer]= CircularBuffer(2800) # Socket buffer is 64 KB
         self.ip_address= ("127.0.0.1", 2345)
         self.loop= asyncio.get_running_loop()
-        self.tasks: List[asyncio.Task]= []
+        self.tasks: Set[asyncio.Task]= set()
         self.risk_engine: Optional[RiskEngine]= None
         self.qm: QueueManager= None
         self.max_tasks= 3
@@ -78,10 +78,29 @@ class ConnectionHandler:
                     logger.info(f"[SERVER]: Handhshake is complete with {addr}")
 
                     # Run the socket handler at the backgroud and add it to tasks to clean at the end to avoid zombie-tasks
+                    '''
+                    try:
+                        # Clear the background tasks  
+                        if self.tasks:
+                            for task in self.tasks:
+                                logger.info(f"[SERVER]: Task-{task.get_name()} is closing")
+                                if not task.done():
+                                    task.cancel()
+                            await asyncio.gather(*self.tasks)
+                            self.tasks.clear()
+                            logger.info("[SERVER]: Tasks are cleared")
+                        
+                    except Exception as e:
+                        logger.debug(f"[SERVER]:Error in closing the scheduled tasks: {e}")
+                    '''
+
                     try:
                         task= asyncio.create_task(self.handler())
-                        self.tasks.append(task)
-                        logger.info(f"[SERVER]: Task {task.get_name()} is created and added to list")
+                        self.tasks.add(task)
+                        logger.info(f"[SERVER]: {task.get_name()} is created and added to list. Lsize= {len(self.tasks)}")
+
+                        task.add_done_callback(self.tasks.discard)
+
                     except asyncio.CancelledError as e:
                         logger.debug(f"Task {task.get_name()} is cancelled")
                         raise e
@@ -124,7 +143,7 @@ class ConnectionHandler:
 
             while True:
                 try:
-                    #t0= time.perf_counter_ns()
+                    
                     nbytes= self.ssock.recv_into(self.cb.write_to())
                     print(f"nbyes= {nbytes}")
                     if nbytes == 0:
@@ -136,31 +155,14 @@ class ConnectionHandler:
                     while self.cb.count >= self.cb.packet_size:
                         
                         fields= self.cb.peek()
-                        t2= time.perf_counter_ns()
                         print(fields)
                         try:
                             await self.qm.add_items(fields)
                         except Exception as e:
-                            print(f"\n[SERVER]: QM: {e}")
-                        '''
-                        if fields[0] == 0:
-                            self.risk_engine.update_market_price(fields[1], fields[2])
-                            logger.info("[RISK MANAGER]: Book prices are updated")
-                            print(self.risk_engine.book)
-                            #print(self.risk_engine.id_to_idx)
+                            logger.error(f"\n[SERVER]: QM: {e}")
                         
-                        else:
-                            self.risk_engine.process_trade(fields[1], fields[2], fields[3], fields[4])
-                            logger.info("[RISK MANAGER]: trade is processed")
-                            print(self.risk_engine.book)
-                            #print(self.risk_engine.id_to_idx)
-                        '''
-                        t3= time.perf_counter_ns()
-                        print(f"\n[CALCULATIONS TIME]: ({(t3 - t2) / 1000 :.2f}")
                         self.cb.advance()
-                    #t1= time.perf_counter_ns()
-                    #print(f"\n[SOCKET TIME]: ({(t1 - t0) / 1000 :.2f}")
-
+                    
                 # Try to read the binary data except reader or writer want to read but no data. Wait and don't close the socket
                 except (ssl.SSLWantReadError, ssl.SSLWantWriteError):
                     if self.ssock.pending() > 0:
@@ -183,20 +185,9 @@ class ConnectionHandler:
         except ConnectionResetError:
             print(f"Connection reset by client peer")
 
+            
 
     async def clear_connection(self):
-        try:
-            # Clear the background tasks  
-            if self.tasks:
-                for task in self.tasks:
-                    logger.info(f"[SERVER]: Task-{task.get_name()} is closing")
-                    if not task.done():
-                        task.cancel()
-            await asyncio.gather(*self.tasks)
-            logger.info("[SERVER]: Tasks are cleared")
-
-        except Exception as e:
-            logger.debug(f"[SERVER]:Error in closing the scheduled tasks: {e}")
 
         try:
             # Close the socket

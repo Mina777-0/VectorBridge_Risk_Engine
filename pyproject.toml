@@ -1,9 +1,9 @@
 [project]
-name = "finalto-mock-dashboard"
+name = "VectorBridge_Risk_Engine"
 version = "0.1.0"
-description = "Add your description here"
+description = "High Performance Python/Rust Risk Engine"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13, <3.14"
 dependencies = [
     "aiohttp>=3.13.5",
     "cryptography>=46.0.6",
@@ -12,4 +12,13 @@ dependencies = [
     "maturin>=1.13.1",
     "numpy>=2.4.4",
     "pandas>=3.0.2",
+    "VectorBridge_Risk_Engine",
 ]
+
+[build-system]
+requires= ["maturin>=1.5, <2.0"]
+build-backend= "maturin"
+
+[tool.maturin]
+module-name = "risk_manager"
+features = ["pyo3/extension-module"]

@@ -5990,3 +5990,304 @@
 20/04/2026 - 15:53:58 Worker-Task-7 is closing
 20/04/2026 - 15:53:58 Worker-Task-8 is closing
 20/04/2026 - 15:53:58 Keyboard interrupted - closed the event loop
+21/04/2026 - 11:26:16 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:26:16 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:26:16 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:26:16 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:26:16 [SERVER]: Server is running!
+21/04/2026 - 11:26:16 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:26:16 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:26:38 [WS]: Client is connected to the dashboard
+21/04/2026 - 11:26:53 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:26:53 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:26:53 [SERVER]: Handhshake is complete with ('127.0.0.1', 59092)
+21/04/2026 - 11:26:53 [SERVER]: Task Task-22 is created and added to list
+21/04/2026 - 11:26:53 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:27:02 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:27:02 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:27:02 [SERVER]: Handhshake is complete with ('127.0.0.1', 59129)
+21/04/2026 - 11:27:02 [SERVER]: Task Task-23 is created and added to list
+21/04/2026 - 11:27:02 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:27:11 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:27:11 [SERVER]: Task-Task-22 is closing
+21/04/2026 - 11:27:11 [SERVER]: Task-Task-23 is closing
+21/04/2026 - 11:27:11 [SERVER]: Tasks are cleared
+21/04/2026 - 11:27:11 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:27:11 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:27:11 Worker-Task-5 is closing
+21/04/2026 - 11:27:11 Worker-Task-6 is closing
+21/04/2026 - 11:27:11 Worker-Task-7 is closing
+21/04/2026 - 11:27:11 Worker-Task-8 is closing
+21/04/2026 - 11:27:11 Keyboard interrupted - closed the event loop
+21/04/2026 - 11:28:10 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:28:10 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:28:10 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:28:10 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:28:10 [SERVER]: Server is running!
+21/04/2026 - 11:28:10 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:28:10 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:28:16 [WS]: Client is connected to the dashboard
+21/04/2026 - 11:28:21 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:28:21 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:28:21 [SERVER]: Handhshake is complete with ('127.0.0.1', 59449)
+21/04/2026 - 11:28:21 [SERVER]: Task Task-19 is created and added to list
+21/04/2026 - 11:28:21 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:28:29 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:28:29 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:28:29 [SERVER]: Handhshake is complete with ('127.0.0.1', 59489)
+21/04/2026 - 11:28:29 [SERVER]: Task Task-20 is created and added to list
+21/04/2026 - 11:28:29 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:28:53 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:28:53 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:28:53 [SERVER]: Handhshake is complete with ('127.0.0.1', 59583)
+21/04/2026 - 11:28:53 [SERVER]: Task Task-21 is created and added to list
+21/04/2026 - 11:28:53 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:29:04 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:29:04 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:29:04 [SERVER]: Handhshake is complete with ('127.0.0.1', 59632)
+21/04/2026 - 11:29:04 [SERVER]: Task Task-22 is created and added to list
+21/04/2026 - 11:29:04 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:29:14 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:29:14 [SERVER]: Task-Task-19 is closing
+21/04/2026 - 11:29:14 [SERVER]: Task-Task-20 is closing
+21/04/2026 - 11:29:14 [SERVER]: Task-Task-21 is closing
+21/04/2026 - 11:29:14 [SERVER]: Task-Task-22 is closing
+21/04/2026 - 11:29:14 [SERVER]: Tasks are cleared
+21/04/2026 - 11:29:14 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:29:14 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:29:14 Worker-Task-5 is closing
+21/04/2026 - 11:29:14 Worker-Task-6 is closing
+21/04/2026 - 11:29:14 Worker-Task-7 is closing
+21/04/2026 - 11:29:14 Worker-Task-8 is closing
+21/04/2026 - 11:29:14 Keyboard interrupted - closed the event loop
+21/04/2026 - 11:31:56 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:31:56 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:31:56 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:31:56 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:31:56 [SERVER]: Server is running!
+21/04/2026 - 11:31:56 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:31:56 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:31:59 [WS]: Client is connected to the dashboard
+21/04/2026 - 11:32:03 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:32:03 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:32:03 [SERVER]: Handhshake is complete with ('127.0.0.1', 60372)
+21/04/2026 - 11:32:03 [SERVER]: Task Task-19 is created and added to list
+21/04/2026 - 11:32:03 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:32:04 [SERVER]: Task-Task-19 is closing
+21/04/2026 - 11:32:18 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:32:18 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:32:18 [SERVER]: Handhshake is complete with ('127.0.0.1', 60434)
+21/04/2026 - 11:32:18 [SERVER]: Task Task-20 is created and added to list
+21/04/2026 - 11:32:18 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:32:18 [SERVER]: Task-Task-19 is closing
+21/04/2026 - 11:32:18 [SERVER]:Error in closing the scheduled tasks: maximum recursion depth exceeded
+21/04/2026 - 11:32:50 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:32:50 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:32:50 [SERVER]: Handhshake is complete with ('127.0.0.1', 60566)
+21/04/2026 - 11:32:50 [SERVER]: Task Task-21 is created and added to list
+21/04/2026 - 11:32:50 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:32:51 [SERVER]: Task-Task-19 is closing
+21/04/2026 - 11:32:51 [SERVER]:Error in closing the scheduled tasks: maximum recursion depth exceeded
+21/04/2026 - 11:33:07 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:33:07 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:33:07 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:33:07 Worker-Task-5 is closing
+21/04/2026 - 11:33:07 Worker-Task-6 is closing
+21/04/2026 - 11:33:07 Worker-Task-7 is closing
+21/04/2026 - 11:33:07 Worker-Task-8 is closing
+21/04/2026 - 11:36:40 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:36:40 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:36:40 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:36:40 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:36:40 [SERVER]: Server is running!
+21/04/2026 - 11:36:40 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:36:40 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:36:44 [WS]: Client is connected to the dashboard
+21/04/2026 - 11:36:48 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:36:48 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:36:48 [SERVER]: Handhshake is complete with ('127.0.0.1', 61528)
+21/04/2026 - 11:36:48 [SERVER]: Task Task-19 is created and added to list
+21/04/2026 - 11:36:48 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:36:59 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:36:59 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:36:59 [SERVER]: Handhshake is complete with ('127.0.0.1', 61573)
+21/04/2026 - 11:36:59 [SERVER]: Task-Task-19 is closing
+21/04/2026 - 11:36:59 [SERVER]: Tasks are cleared
+21/04/2026 - 11:36:59 [SERVER]: Task Task-20 is created and added to list
+21/04/2026 - 11:36:59 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:37:12 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:37:12 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:37:12 [SERVER]: Handhshake is complete with ('127.0.0.1', 61628)
+21/04/2026 - 11:37:12 [SERVER]: Task-Task-19 is closing
+21/04/2026 - 11:37:12 [SERVER]: Task-Task-20 is closing
+21/04/2026 - 11:37:12 [SERVER]: Tasks are cleared
+21/04/2026 - 11:37:12 [SERVER]: Task Task-21 is created and added to list
+21/04/2026 - 11:37:12 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:37:37 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:37:37 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:37:37 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:37:37 Worker-Task-5 is closing
+21/04/2026 - 11:37:37 Worker-Task-6 is closing
+21/04/2026 - 11:37:37 Worker-Task-7 is closing
+21/04/2026 - 11:37:37 Worker-Task-8 is closing
+21/04/2026 - 11:37:37 Keyboard interrupted - closed the event loop
+21/04/2026 - 11:47:06 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:47:06 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:47:06 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:47:06 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:47:06 [SERVER]: Server is running!
+21/04/2026 - 11:47:06 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:47:06 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:47:18 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:47:18 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:47:18 [SERVER]: Handhshake is complete with ('127.0.0.1', 64108)
+21/04/2026 - 11:47:18 [SERVER]: Task Task-10 is created and added to list
+21/04/2026 - 11:47:18 Unexpected error occured: set.discard() takes exactly one argument (0 given)
+21/04/2026 - 11:47:18 Critical System Failure: set.discard() takes exactly one argument (0 given)
+21/04/2026 - 11:47:18 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:47:18 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:47:18 Worker-Task-5 is closing
+21/04/2026 - 11:47:18 Worker-Task-6 is closing
+21/04/2026 - 11:47:18 Worker-Task-7 is closing
+21/04/2026 - 11:47:18 Worker-Task-8 is closing
+21/04/2026 - 11:48:43 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:48:43 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:48:43 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:48:43 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:48:43 [SERVER]: Server is running!
+21/04/2026 - 11:48:43 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:48:43 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:48:45 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:48:45 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:48:45 [SERVER]: Handhshake is complete with ('127.0.0.1', 64466)
+21/04/2026 - 11:48:45 [SERVER]: Task Task-10 is created and added to list
+21/04/2026 - 11:48:45 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:48:57 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:48:57 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:48:57 [SERVER]: Handhshake is complete with ('127.0.0.1', 64515)
+21/04/2026 - 11:48:57 [SERVER]: Task Task-11 is created and added to list
+21/04/2026 - 11:48:57 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:49:08 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:49:08 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:49:08 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:49:08 Worker-Task-5 is closing
+21/04/2026 - 11:49:08 Worker-Task-6 is closing
+21/04/2026 - 11:49:08 Worker-Task-7 is closing
+21/04/2026 - 11:49:08 Worker-Task-8 is closing
+21/04/2026 - 11:49:08 Keyboard interrupted - closed the event loop
+21/04/2026 - 11:54:58 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:54:58 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:54:58 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:54:58 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:54:58 [SERVER]: Server is running!
+21/04/2026 - 11:54:58 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:54:58 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:55:01 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:55:01 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:55:01 [SERVER]: Handhshake is complete with ('127.0.0.1', 49625)
+21/04/2026 - 11:55:01 [SERVER]: Task-10 is created and added to list. Lsize= 1
+21/04/2026 - 11:55:01 Unexpected error occured: set.discard() takes exactly one argument (0 given)
+21/04/2026 - 11:55:02 Critical System Failure: set.discard() takes exactly one argument (0 given)
+21/04/2026 - 11:55:02 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:55:02 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:55:02 Worker-Task-5 is closing
+21/04/2026 - 11:55:02 Worker-Task-6 is closing
+21/04/2026 - 11:55:02 Worker-Task-7 is closing
+21/04/2026 - 11:55:02 Worker-Task-8 is closing
+21/04/2026 - 11:55:19 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:55:19 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:55:19 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:55:19 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:55:19 [SERVER]: Server is running!
+21/04/2026 - 11:55:19 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:55:19 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:55:21 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:55:21 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:55:21 [SERVER]: Handhshake is complete with ('127.0.0.1', 49704)
+21/04/2026 - 11:55:21 [SERVER]: Task-10 is created and added to list. Lsize= 1
+21/04/2026 - 11:55:21 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:55:32 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:55:32 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:55:32 [SERVER]: Handhshake is complete with ('127.0.0.1', 49753)
+21/04/2026 - 11:55:32 [SERVER]: Task-11 is created and added to list. Lsize= 1
+21/04/2026 - 11:55:32 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:55:39 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:55:39 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:55:39 [SERVER]: Handhshake is complete with ('127.0.0.1', 49782)
+21/04/2026 - 11:55:39 [SERVER]: Task-12 is created and added to list. Lsize= 1
+21/04/2026 - 11:55:39 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:55:52 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:55:52 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:55:52 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:55:52 Worker-Task-5 is closing
+21/04/2026 - 11:55:52 Worker-Task-6 is closing
+21/04/2026 - 11:55:52 Worker-Task-7 is closing
+21/04/2026 - 11:55:52 Worker-Task-8 is closing
+21/04/2026 - 11:55:52 Keyboard interrupted - closed the event loop
+21/04/2026 - 11:57:12 [WM]: Started persistent worker-Task-5
+21/04/2026 - 11:57:12 [WM]: Started persistent worker-Task-6
+21/04/2026 - 11:57:12 [WM]: Started persistent worker-Task-7
+21/04/2026 - 11:57:12 [WM]: Started persistent worker-Task-8
+21/04/2026 - 11:57:12 [SERVER]: Server is running!
+21/04/2026 - 11:57:12 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:57:12 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 11:57:15 [WS]: Client is connected to the dashboard
+21/04/2026 - 11:57:20 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:57:20 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:57:20 [SERVER]: Handhshake is complete with ('127.0.0.1', 50205)
+21/04/2026 - 11:57:20 [SERVER]: Task-19 is created and added to list. Lsize= 1
+21/04/2026 - 11:57:20 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:57:26 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:57:26 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:57:26 [SERVER]: Handhshake is complete with ('127.0.0.1', 50234)
+21/04/2026 - 11:57:26 [SERVER]: Task-20 is created and added to list. Lsize= 1
+21/04/2026 - 11:57:26 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:57:58 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:57:58 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:57:58 [SERVER]: Handhshake is complete with ('127.0.0.1', 50361)
+21/04/2026 - 11:57:58 [SERVER]: Task-21 is created and added to list. Lsize= 1
+21/04/2026 - 11:57:58 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:58:10 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:58:10 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:58:10 [SERVER]: Handhshake is complete with ('127.0.0.1', 50414)
+21/04/2026 - 11:58:10 [SERVER]: Task-22 is created and added to list. Lsize= 1
+21/04/2026 - 11:58:10 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:58:20 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:58:20 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 11:58:20 [SERVER]: Handhshake is complete with ('127.0.0.1', 50455)
+21/04/2026 - 11:58:20 [SERVER]: Task-23 is created and added to list. Lsize= 1
+21/04/2026 - 11:58:20 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 11:58:29 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 11:58:29 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 11:58:29 [SERVER]: Server shut down gracefully
+21/04/2026 - 11:58:29 Worker-Task-5 is closing
+21/04/2026 - 11:58:29 Worker-Task-6 is closing
+21/04/2026 - 11:58:29 Worker-Task-7 is closing
+21/04/2026 - 11:58:29 Worker-Task-8 is closing
+21/04/2026 - 11:58:29 Keyboard interrupted - closed the event loop
+21/04/2026 - 12:00:10 [WM]: Started persistent worker-Task-5
+21/04/2026 - 12:00:10 [WM]: Started persistent worker-Task-6
+21/04/2026 - 12:00:10 [WM]: Started persistent worker-Task-7
+21/04/2026 - 12:00:10 [WM]: Started persistent worker-Task-8
+21/04/2026 - 12:00:10 [SERVER]: Server is running!
+21/04/2026 - 12:00:10 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 12:00:10 [WS SERVER]: Dahsboard API is running on http://127.0.0.1:8080
+21/04/2026 - 12:00:28 [WS]: Client is connected to the dashboard
+21/04/2026 - 12:00:36 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 12:00:36 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 12:00:36 [SERVER]: Handhshake is complete with ('127.0.0.1', 50556)
+21/04/2026 - 12:00:36 [SERVER]: Task-20 is created and added to list. Lsize= 1
+21/04/2026 - 12:00:36 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 12:00:43 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 12:00:43 [CLIENT]: SSL/TLS handashake with server 127.0.0.1:2345 is successful. Porotocl= TLSv1.3
+21/04/2026 - 12:00:43 [SERVER]: Handhshake is complete with ('127.0.0.1', 50585)
+21/04/2026 - 12:00:43 [SERVER]: Task-21 is created and added to list. Lsize= 1
+21/04/2026 - 12:00:43 [SERVER]: Waiter is created in waiting for connection to accept
+21/04/2026 - 12:00:52 [SERVER]: fd is removed. Connection is accepted
+21/04/2026 - 12:00:52 [SERVER]: ssock ('127.0.0.1', 2345) is closing
+21/04/2026 - 12:00:52 [SERVER]: Server shut down gracefully
+21/04/2026 - 12:00:52 Worker-Task-5 is closing
+21/04/2026 - 12:00:52 Worker-Task-6 is closing
+21/04/2026 - 12:00:52 Worker-Task-7 is closing
+21/04/2026 - 12:00:52 Worker-Task-8 is closing
+21/04/2026 - 12:00:52 Keyboard interrupted - closed the event loop
